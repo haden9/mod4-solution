@@ -1,8 +1,16 @@
-<a ui-sref="home">Home</a> &gt; <a ui-sref="categoryList">Categories</a> &gt; {{itemList.category.name}}
+<a ui-sref="home">Home</a> &gt; <a ui-sref="categoryList">Categories</a> 
+&gt; {{itemList.category.name}}
 
 <h4>Category: {{itemList.category.name}} Menu Items</h4>
-<ul>
-  <li ng-repeat="menuItem in itemList.menuItems">
-    {{menuItem.name}}
-  </li>
-</ul>
+<table class="menu-table">
+  <tr>
+    <th>Name</th>
+    <th>Price Large</th>
+    <th>Description</th>
+  </tr>
+  <tr ng-repeat="menuItem in itemList.menuItems">
+    <td>{{menuItem.name}}</td>
+    <td>{{menuItem.price_large | currency}}</td>
+    <td>{{menuItem.description}}</td>
+  </tr>
+</table>
