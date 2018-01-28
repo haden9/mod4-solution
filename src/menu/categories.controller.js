@@ -9,5 +9,7 @@
         var categoryList = this;
 
         categoryList.categories = categories;
+
+        console.log(categoryList);
     }
 })();
